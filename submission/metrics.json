@@ -1,0 +1,83 @@
+{
+  "dataset": {
+    "train_files": 261,
+    "val_files": 56,
+    "test_files": 56,
+    "train_rows": 534337,
+    "val_rows": 114500,
+    "test_rows": 114502,
+    "window_length_available": 7,
+    "note": "Repository tensors provide 7 low-gain samples per row."
+  },
+  "selection": {
+    "criterion": "lowest validation RMS residual ratio",
+    "candidates": [
+      {
+        "alpha": 0.0,
+        "mean": 0.10247278239677765,
+        "rms": 9.989757002378948
+      },
+      {
+        "alpha": 1e-06,
+        "mean": 0.10247287904287934,
+        "rms": 9.989756802600594
+      },
+      {
+        "alpha": 0.0001,
+        "mean": 0.10248244693362485,
+        "rms": 9.989737029471403
+      },
+      {
+        "alpha": 0.01,
+        "mean": 0.10343850202512773,
+        "rms": 9.987808888032452
+      },
+      {
+        "alpha": 0.1,
+        "mean": 0.11206411429961168,
+        "rms": 9.974632067601284
+      },
+      {
+        "alpha": 1.0,
+        "mean": 0.192547406583821,
+        "rms": 10.175426531423597
+      },
+      {
+        "alpha": 10.0,
+        "mean": 0.7259437736361566,
+        "rms": 16.26294497977061
+      },
+      {
+        "alpha": 100.0,
+        "mean": 2.4727405825922495,
+        "rms": 26.743603657309016
+      }
+    ]
+  },
+  "model": {
+    "type": "ridge_linear",
+    "alpha": 0.1,
+    "weights": [
+      -233.25236203973682,
+      1333.4958370242155,
+      -3284.1641943958125,
+      6363.780419834173,
+      -2547.0407158432954,
+      955.7674570358038,
+      -276.8249019764738
+    ],
+    "bias": 0.033131303212839476
+  },
+  "residual_policy": {
+    "definition": "(reconstructed-target)/target with signed epsilon guard when |target|<=eps",
+    "epsilon": 1e-06
+  },
+  "validation": {
+    "mean": 0.11206411429961168,
+    "rms": 9.974632067601284
+  },
+  "test": {
+    "mean": 0.07080849278530017,
+    "rms": 9.688318026448771
+  }
+}
